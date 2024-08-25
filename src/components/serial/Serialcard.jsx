@@ -72,7 +72,7 @@ export const Serialcard = () => {
       </div>
       <div className="h-[20vh] z-20 bg-black/20 shadow-[0px_-20px_20px_20px_black]  backdrop-blur-[20px] absolute bottom-0 right-0 left-0">
         <div className="flex justify-center text-red-600 cursor-pointer hover:text-blue-600 absolute top-[-50px] left-0 right-0">
-          <Link to={`/Serial/${id}`} className="bg-black/50 px-4 backdrop-blur-[80px]  py-2 my-text rounded-full cursor-pointer">
+          <Link to={`/movie-site/Serial/${id}`} className="bg-black/50 px-4 backdrop-blur-[80px]  py-2 my-text rounded-full cursor-pointer">
                         Show more
           </Link>
         </div>

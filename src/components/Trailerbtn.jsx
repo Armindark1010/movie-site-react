@@ -1,8 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
-
 export const Trailerbtn = ({ scroll, goindex }) => {
   const element = <FontAwesomeIcon icon={faPlay} />;
   const backgroundStyle = {

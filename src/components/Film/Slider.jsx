@@ -174,7 +174,7 @@ export const Slider = () => {
                     <div className="mt-5">{item.overview}</div>
                     <div className="mt-5">
                       <Link
-                        to={`/Films/${item.id}`}
+                        to={`/movie-site/Films/${item.id}`}
                         className="bg-black/50 px-4 backdrop-blur-[80px]  py-2 my-text rounded-full cursor-pointer"
                       >
                         Show more

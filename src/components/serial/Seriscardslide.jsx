@@ -127,7 +127,7 @@ export const Seriscard = ({ item }) => {
               // Adding data-twe-carousel-active conditionally
               {...(index === 0 ? { "data-twe-carousel-active": true } : {})}
             >
-              <Link to={`/person/${charImg.id}/${item.id}`} className="block w-full h-full cursor-pointer">
+              <Link to={`/movie-site/person/${charImg.id}/${item.id}`} className="block w-full h-full cursor-pointer">
                 <div className="h-full w-full relative">
                   <img
                     src={require(`../../imgs/${charImg.img}`)}

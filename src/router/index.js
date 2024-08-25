@@ -10,11 +10,11 @@ import { NotFound } from '../pages/NotFound';
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Films />} />
-      <Route path="/Films/:id" element={<Film_detail />} />
-      <Route path="/Serial/:id" element={<Seril_detail />} />
-      <Route path="/Serial" element={<Serial />} />
-      <Route path="/person/:id/:film_id" element={<Person_detail />} />
+      <Route path="/movie-site/" element={<Films />} />
+      <Route path="/movie-site/Films/:id" element={<Film_detail />} />
+      <Route path="/movie-site/Serial/:id" element={<Seril_detail />} />
+      <Route path="/movie-site/Serial" element={<Serial />} />
+      <Route path="/movie-site/person/:id/:film_id" element={<Person_detail />} />
       <Route path="*" element={<NotFound />} />
 
     </Routes>

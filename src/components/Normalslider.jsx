@@ -36,7 +36,7 @@ export const Normalslider = ({ data }) => {
         ref={slider}
       >
         {data.map((item, index) => (
-          <Link to={`/Serial/${item.id}`} key={index} className='inline-block h-full md:w-1/5 w-1/3 px-5 relative cursor-pointer'>
+          <Link to={`/movie-site/Serial/${item.id}`} key={index} className='inline-block h-full md:w-1/5 w-1/3 px-5 relative cursor-pointer'>
 
               <img
                 src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}

@@ -202,7 +202,7 @@ export const Film_detail = () => {
     {collection.length <= 5 && (
       <div className="flex justify-center gap-2 items-center mt-3">
               {collection.map((item, index) => (
-            <Link key={index} to={`/Serial/${item.id}`} className="w-1/5 h-64 cursor-pointer relative">
+            <Link key={index} to={`/movie-site/Films/${item.id}`} className="w-1/5 h-64 cursor-pointer relative">
 
 <img
                 src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}

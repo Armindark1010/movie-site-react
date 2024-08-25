@@ -185,7 +185,7 @@ export const NotFound = () => {
 				</div>
 				<p class="text-2xl md:text-base text-red-500 p-2 mb-4">The stuff you were looking for doesn't exist
                     </p>
-                    <Link to='/' class="bg-transparent hover:bg-red-500 text-red-500 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-red-600 hover:border-transparent">
+                    <Link to='/movie-site/' class="bg-transparent hover:bg-red-500 text-red-500 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-red-600 hover:border-transparent">
                     Home
                     </Link>
 			</div>

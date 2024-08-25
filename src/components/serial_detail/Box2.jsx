@@ -11,7 +11,7 @@ export const Box2 = ({ credits,film_id }) => {
         </div>
       <div className='w-full h-[90%] overflow-x-auto px-2 flex flex-col-reverse md:flex-wrap justify-center'>
       {credits.map((item) => (
-        <Link to={`/person/${item.id}/${film_id}`} class="avatar group/item gap-2 items-center cursor-pointer">
+        <Link to={`/movie-site/person/${item.id}/${film_id}`} class="avatar group/item gap-2 items-center cursor-pointer">
             <div class="ring-error ring-offset-base-100 w-16 rounded-full ring ring-offset-2 group-hover/item:ring-primary">
               <img src={`https://image.tmdb.org/t/p/w500${item.profile_path}`} />
             </div>

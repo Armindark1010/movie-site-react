@@ -60,7 +60,7 @@ export const Searchbox = ({ boxRef, isopen,togglebox }) => {
         {data.length > 0 && (
           <div>
             {data.map((item, index) => (
-              <Link to={`/${item.media_type == 'tv' ? 'Serial/' : 'Films/'} ${item.id}`} key={index} className='inline-block h-[192px] px-2 relative cursor-pointer w-1/2' onClick={()=>togglebox()}>
+              <Link to={`/movie-site/${item.media_type == 'tv' ? 'Serial/' : 'Films/'} ${item.id}`} key={index} className='inline-block h-[192px] px-2 relative cursor-pointer w-1/2' onClick={()=>togglebox()}>
                 <img
                   src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                   alt={item.original_name || item.original_title}

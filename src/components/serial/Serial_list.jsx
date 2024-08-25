@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { HeaderBox } from "../HeaderBox";
-import { Link } from "react-router-dom";
 import { Normalslider } from "../Normalslider";
 
 export const Serial_list = () => {
