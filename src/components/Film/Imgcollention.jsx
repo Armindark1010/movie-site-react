@@ -4,15 +4,16 @@ import { Carousel } from 'flowbite';
 
 export const Imgcollention = ({ id }) => {
     const [filmbg, setFilmbgData] = useState([]);
+    const [filmbgsm, setFilmbgDatasm] = useState([]);
     const mslide = [{}, {}, {}, {}, {}]
     const carouselRef = useRef(null)
-    
+
 
   const getFilmData = async () => {
     try {
       const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}/images?api_key=fca43d4c1dc3416dd0309cde841c540a`);
       setFilmbgData(response.data.backdrops.slice(0, 5));
-      console.log(response.data.backdrops.slice(0, 5))
+      setFilmbgDatasm(response.data.posters.slice(0, 5));
     } catch (error) {
       console.error('Error:', error);
       alert('An error occurred while fetching the movie data.');
@@ -77,7 +78,8 @@ useEffect(() => {
       <div className="relative h-full overflow-hidden rounded-lg">
         {filmbg.map((item, index) => (
           <div id={`carousel-item-${index}-${id}`} key={index} className={`absolute inset-0 ${index === 0 ? 'block' : 'hidden'} w-full h-full duration-700 ease-in-out`}>
-            <img src={`https://image.tmdb.org/t/p/w500${item.file_path}`} className="h-full w-full object-cover" alt="Movie backdrop" />
+            <img src={`https://image.tmdb.org/t/p/w500${item.file_path}`} className="h-full w-full object-cover md:block hidden" alt="Movie backdrop" />
+            <img src={`https://image.tmdb.org/t/p/w500${filmbgsm[index].file_path}`} className="h-full w-full object-cover md:hidden block" alt="Movie backdrop" />
           </div>
         ))}
       </div>

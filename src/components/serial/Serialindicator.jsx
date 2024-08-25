@@ -13,7 +13,6 @@ export const Serialindicator = ({ id, index, setid }) => {
                 `https://api.themoviedb.org/3/tv/${id}?api_key=fca43d4c1dc3416dd0309cde841c540a`
             );
             setbg(response.data.backdrop_path);
-            console.log(response.data.backdrop_path)
         } catch (error) {
             console.error("Error:", error);
             alert("An error occurred while fetching the data.");

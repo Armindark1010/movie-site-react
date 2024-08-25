@@ -11,9 +11,7 @@ export const Imgbox = ({url}) => {
     const modal_btn = (url) => {
         $("#modal_img").attr('src', url);
         $("#download").attr('href', url); // اصلاح 'herf' به 'href'
-        console.log(url);
     };
-    console.log(url)
     useEffect(() => {
         initTWE({ Modal, Ripple });
       }, []);

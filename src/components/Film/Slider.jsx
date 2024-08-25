@@ -55,7 +55,6 @@ export const Slider = () => {
     $("[id^='badge-']").addClass("hidden");
     $(`#badge-${show}`).removeClass("hidden");
     $(".badge").hover(function () {
-      console.log("test")
       $(".information").addClass("opacity-0")
       $(".information").removeClass("opacity-100")
       }, function(){

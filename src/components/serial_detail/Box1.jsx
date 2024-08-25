@@ -6,24 +6,28 @@ import { Trailerbtn } from "../Trailerbtn";
 
 export const Box1 = ({ data, scroll, goindex,logoUrl }) => {
   const [backgroundStyle, setbg] = useState(null);
-  const [showSeasons, setShowSeasons] = useState(false); // State برای مدیریت نمایش فصل‌ها
-
-  useEffect(() => {
-    if (data && data.backdrop_path) {
-      setbg({
-        background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(https://image.tmdb.org/t/p/w500${data.backdrop_path})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      });
-    }
-  }, [data]);
+  const [showSeasons, setShowSeasons] = useState(false);
 
   return (
     <div
       className="relative inset-0 h-full justify-center bg-black text-white"
-      style={backgroundStyle}
     >
       <div className="h-full w-full">
+      <img
+              src={`https://image.tmdb.org/t/p/w500/${data.backdrop_path}`}
+              className="h-full md:block hidden w-full"
+              alt="Backdrop 2"
+      />
+      <img
+              src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`}
+              className="h-full md:hidden block w-full"
+              alt="Backdrop 2"
+      />
+      </div>
+      <div className="bg-black/50 inset-0 absolute z-[1]">
+
+      </div>
+      <div className="h-full w-full absolute inset-0 z-[2]">
         <div className="h-full pt-24 text-center">
           <div className="w-full flex justify-center items-center h-2/6">
             <img

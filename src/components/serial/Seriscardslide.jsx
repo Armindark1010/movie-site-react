@@ -91,8 +91,7 @@ export const Seriscard = ({ item }) => {
         data-twe-carousel-init
         data-twe-ride="carousel"
       >
-        {/* information box */}
-        <div className="absolute md:hidden block left-0 cursor-pointer  z-[60]" onClick={()=>setbox(!box)}>
+        <div className="absolute md:hidden block left-0 cursor-pointer  z-[999]" onClick={()=>setbox(!box)}>
           open information
         </div>
         <div className={`absolute p-2 md:hidden block transition-all duration-1000 inset-0 ${box ? 'w-full opacity-100' : 'w-0 opacity-0'} bg-black/50 backdrop-blur-[50px] z-50`}>

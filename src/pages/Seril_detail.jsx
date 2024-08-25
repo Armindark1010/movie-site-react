@@ -55,6 +55,7 @@ export const Seril_detail = () => {
       setsimilar(similar.data.results);
       setcredits(credit.data.cast);
       setFilmbgData(bgs.data);
+      console.log(bgs.data)
       setTrailers(trailers);
       if (trailers.length > 0) {
         setVideo(true);
@@ -97,7 +98,12 @@ export const Seril_detail = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={`https://image.tmdb.org/t/p/w500/${filmbg.backdrops[2].file_path}`}
-              className="h-full w-full"
+              className="h-full md:block hidden w-full"
+              alt="Backdrop 2"
+            />
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${filmbg.posters[2].file_path}`}
+              className="h-full md:hidden block w-full"
               alt="Backdrop 2"
             />
           </div>
@@ -113,11 +119,16 @@ export const Seril_detail = () => {
         >
           {filmbg.backdrops && filmbg.backdrops.length > 1 && (
             <div className="absolute inset-0 z-0">
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${filmbg.backdrops[3].file_path}`}
-                className="h-full w-full"
-                alt="Backdrop 3"
-              />
+                         <img
+              src={`https://image.tmdb.org/t/p/w500/${filmbg.backdrops[3].file_path}`}
+              className="h-full md:block hidden w-full"
+              alt="Backdrop 3"
+            />
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${filmbg.posters[3].file_path}`}
+              className="h-full md:hidden block w-full"
+              alt="Backdrop 3"
+            />
             </div>
           )}
           <div className="inset-0 absolute z-3 flex flex-col justify-center items-center h-full w-full bg-black/30 text-white backdrop-blur-sm">
@@ -141,11 +152,16 @@ export const Seril_detail = () => {
         >
           {filmbg.backdrops && filmbg.backdrops.length > 1 && (
             <div className="absolute inset-0 z-0">
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${filmbg.backdrops[4].file_path}`}
-                className="h-full w-full"
-                alt="Backdrop 3"
-              />
+                          <img
+              src={`https://image.tmdb.org/t/p/w500/${filmbg.backdrops[4].file_path}`}
+              className="h-full md:block hidden w-full"
+              alt="Backdrop 4"
+            />
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${filmbg.posters[4].file_path}`}
+              className="h-full md:hidden block w-full"
+              alt="Backdrop 4"
+            />
             </div>
           )}
           <div className="inset-0 absolute z-3 flex flex-col justify-center items-center h-full w-full bg-black/30 text-white backdrop-blur-sm">

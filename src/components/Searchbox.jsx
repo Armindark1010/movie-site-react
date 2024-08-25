@@ -10,7 +10,7 @@ export const Searchbox = ({ boxRef, isopen,togglebox }) => {
     try {
       const response = await axios.get(`https://api.themoviedb.org/3/search/multi?api_key=fca43d4c1dc3416dd0309cde841c540a&query=${value}`);
       setData(response.data.results);
-      console.log(response.data.results)
+
     } catch (error) {
       console.error('Error:', error);
       alert('An error occurred while fetching the movie data.');
@@ -45,7 +45,7 @@ export const Searchbox = ({ boxRef, isopen,togglebox }) => {
   return (
     <div 
       ref={boxRef} 
-      className={`${calculateHeight()} left-5 right-5 bg-white/20 backdrop-blur-[30px] rounded-2xl opacity-0 duration-1000 transition-all absolute ${isopen ? 'opacity-100' : 'opacity-0'}`}
+      className={`h-0 left-5 right-5 bg-white/20 backdrop-blur-[30px] rounded-2xl opacity-0 duration-1000 transition-all absolute overflow-hidden ${isopen ? `opacity-100 ${calculateHeight()}` : 'opacity-0 h-0'}`}
     >
       <div>Search</div>
       <div>
