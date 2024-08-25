@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/movie-site/static/css/main.8edb8d36.css",
-    "main.js": "/movie-site/static/js/main.beee90e9.js",
+    "main.css": "/movie-site/static/css/main.e80b16b2.css",
+    "main.js": "/movie-site/static/js/main.ae9fba66.js",
     "static/media/Jon_Snow.png": "/movie-site/static/media/Jon_Snow.a3e7b26f69c9e5d8a460.png",
     "static/media/Leif_S2.png": "/movie-site/static/media/Leif_S2.05a27406317714819aa6.png",
     "static/media/Harald_Sigurdsson.png": "/movie-site/static/media/Harald_Sigurdsson.d2c08e28f5e9a635996d.png",
@@ -33,11 +33,11 @@
     "static/media/logo-text.png": "/movie-site/static/media/logo-text.bcba1baec86f396220b8.png",
     "index.html": "/movie-site/index.html",
     "static/media/name_label.svg": "/movie-site/static/media/name_label.9b515dd213cf2c940db314e463701d45.svg",
-    "main.8edb8d36.css.map": "/movie-site/static/css/main.8edb8d36.css.map",
-    "main.beee90e9.js.map": "/movie-site/static/js/main.beee90e9.js.map"
+    "main.e80b16b2.css.map": "/movie-site/static/css/main.e80b16b2.css.map",
+    "main.ae9fba66.js.map": "/movie-site/static/js/main.ae9fba66.js.map"
   },
   "entrypoints": [
-    "static/css/main.8edb8d36.css",
-    "static/js/main.beee90e9.js"
+    "static/css/main.e80b16b2.css",
+    "static/js/main.ae9fba66.js"
   ]
 }
