@@ -3,12 +3,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 export const NotFound = () => {
   return (
-    <div className="bg-black text-white">
-      <div className="flex h-screen">
+    <div className="bg-black text-white h-screen w-full">
+      <div className="flex justify-center items-center h-screen">
         <div className="m-auto text-center">
           <div>
             <svg
-              width="631"
+              width="100%"
               height="379"
               viewBox="0 0 631 379"
               fill="none"
