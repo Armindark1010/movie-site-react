@@ -6,7 +6,7 @@ import { HeaderBox } from "../components/HeaderBox";
 import { Normalslider } from "../components/Normalslider";
 import { Imgcolection } from "../components/Imgcolection";
 import { Imgbox } from "../components/Imgbox";
-
+import { Loading } from "../components/Loading";
 export const Person_detail = () => {
   const [personDetail, setPersonDetail] = useState(null);
   const [trailers, setTrailers] = useState([]);
@@ -80,7 +80,7 @@ https://api.themoviedb.org/3/person/${id}/images?api_key=fca43d4c1dc3416dd0309cd
     },
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Loading />;
   if (error) return <div>{error}</div>;
 
   return (

@@ -7,6 +7,7 @@ import { Box1 } from "../components/serial_detail/Box1";
 import { Box2 } from "../components/serial_detail/Box2";
 import { HeaderBox } from "../components/HeaderBox";
 import { Normalslider } from "../components/Normalslider";
+import { Loading } from "../components/Loading";
 export const Seril_detail = () => {
   const { id } = useParams();
   const [film, setFilmData] = useState([]);
@@ -19,6 +20,8 @@ export const Seril_detail = () => {
   const [logoUrl, setLogoUrl] = useState("");
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const getFilmData = async () => {
     try {
       const response = await axios.get(
@@ -67,6 +70,8 @@ export const Seril_detail = () => {
       if (error.response && error.response.status === 404) {
         navigate("/404");
       }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -79,7 +84,8 @@ export const Seril_detail = () => {
       setCurrentIndex(index);
     }
   };
-
+  if (loading) return <Loading />;
+  if (error) return <div>{error}</div>;
   return (
     <div className="snap-mandatory snap-y overflow-y-auto h-screen">
       <div className="h-screen snap-center">
