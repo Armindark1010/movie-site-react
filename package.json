@@ -1,5 +1,5 @@
 {
-  "name": "movie-site",
+  "name": "movie-site-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -26,8 +26,7 @@
     "tw-elements": "^2.0.0",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://Armindark1010.github.io/movie-site/",
-
+  "homepage": "https://Armindark1010.github.io/movie-site-react/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

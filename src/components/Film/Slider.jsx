@@ -54,13 +54,16 @@ export const Slider = () => {
     }
     $("[id^='badge-']").addClass("hidden");
     $(`#badge-${show}`).removeClass("hidden");
-    $(".badge").hover(function () {
-      $(".information").addClass("opacity-0")
-      $(".information").removeClass("opacity-100")
-      }, function(){
-      $(".information").addClass("opacity-100")
-      $(".information").removeClass("opacity-0")
-    });
+    $(".badge").hover(
+      function () {
+        $(".information").addClass("opacity-0");
+        $(".information").removeClass("opacity-100");
+      },
+      function () {
+        $(".information").addClass("opacity-100");
+        $(".information").removeClass("opacity-0");
+      }
+    );
   }, [Slide_data]);
   const setSlide = (index) => {
     $("[id^='badge-']").addClass("hidden");
@@ -167,14 +170,13 @@ export const Slider = () => {
             <div className="absolute block z-50 w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
               <div className="absolute inset-0 flex md:flex-row flex-col-reverse  text-white">
                 <div className="md:h-full md:w-1/3 rounded-t-2xl transition-all md:pb-0 pb-28 information duration-500 backdrop-blur-[30px] bg-black/20 px-6 md:px-0 md:pr-12 flex items-center justify-start">
-                  <div className="md:w-1/3 hidden md:block">
-                  </div>
+                  <div className="md:w-1/3 hidden md:block"></div>
                   <div className="md:w-2/3 md:text-left text-center">
                     <div className="text-4xl">{item.title}</div>
                     <div className="mt-5">{item.overview}</div>
                     <div className="mt-5">
                       <Link
-                        to={`/movie-site/Films/${item.id}`}
+                        to={`/movie-site-react/Films/${item.id}`}
                         className="bg-black/50 px-4 backdrop-blur-[80px]  py-2 my-text rounded-full cursor-pointer"
                       >
                         Show more

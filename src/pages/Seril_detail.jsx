@@ -108,7 +108,7 @@ export const Seril_detail = () => {
             />
           </div>
         )}
-        <div className="inset-0 absolute z-3 md:text-left text-center bg-black/70 text-red-700 backdrop-blur-sm md:pl-12 px-[10%]">
+        <div className="inset-0 absolute z-3 md:text-left text-center bg-black/70 text-red-700 backdrop-blur-sm md:pl-12 md:px-[10%]">
           <Box2 credits={credits} film_id={id} />
         </div>
       </div>

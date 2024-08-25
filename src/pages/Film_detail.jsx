@@ -166,10 +166,9 @@ export const Film_detail = () => {
         )}
         <div className="inset-0 absolute z-3 flex flex-col justify-center items-center h-full w-full bg-black/30 text-white backdrop-blur-sm">
           <div className="w-full ">
-          <HeaderBox text="like this" />
-          <Normalslider data={similar} />
+            <HeaderBox text="like this" />
+            <Normalslider data={similar} />
           </div>
-
         </div>
       </div>
       <div
@@ -196,26 +195,29 @@ export const Film_detail = () => {
               />
             </div>
           )}
-          {collection.length > 5 && (
-      <Normalslider data={collection} />
-    )}
-    {collection.length <= 5 && (
-      <div className="flex justify-center gap-2 items-center mt-3">
+          {collection.length > 5 && <Normalslider data={collection} />}
+          {collection.length <= 5 && (
+            <div className="flex justify-center gap-2 items-center mt-3">
               {collection.map((item, index) => (
-            <Link key={index} to={`/movie-site/Films/${item.id}`} className="w-1/5 h-64 cursor-pointer relative">
-
-<img
-                src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
-                className="h-full w-auto"
-                alt=""
-            />
-                <div className="absolute h-12 bottom-0 left-0 text-xs right-0 flex justify-center items-center bg-black/50 text-white backdrop-blur-[30px]">
-                  {item.original_name?.length > 0 ? item.original_name : item.original_title}
-                </div>
-            </Link>
-       ))}
-      </div>
-    )}
+                <Link
+                  key={index}
+                  to={`/movie-site-react/Films/${item.id}`}
+                  className="w-1/5 h-64 cursor-pointer relative"
+                >
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
+                    className="h-full w-auto"
+                    alt=""
+                  />
+                  <div className="absolute h-12 bottom-0 left-0 text-xs right-0 flex justify-center items-center bg-black/50 text-white backdrop-blur-[30px]">
+                    {item.original_name?.length > 0
+                      ? item.original_name
+                      : item.original_title}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

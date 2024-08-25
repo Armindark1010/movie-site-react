@@ -3,6 +3,8 @@ import axios from "axios";
 import name_label from "../../imgs/name_label.svg";
 import $ from "jquery";
 import { Carousel, initTWE } from "tw-elements";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { Trailerbtn } from "../Trailerbtn";
 import { Link } from "react-router-dom";
 export const Seriscard = ({ item }) => {
@@ -11,8 +13,8 @@ export const Seriscard = ({ item }) => {
   const carouselRef = useRef(null);
   const [logoUrl, setLogoUrl] = useState("");
   const sectionRefs = useRef([]);
-  const [box, setbox] = useState(false)
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [box, setbox] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const getfilms_data = async () => {
     try {
       const response = await axios.get(
@@ -52,17 +54,16 @@ export const Seriscard = ({ item }) => {
   }, [data]);
   const scrollToIndex = (index) => {
     if (sectionRefs.current[index]) {
-      sectionRefs.current[index].scrollIntoView({ behavior: 'smooth' });
+      sectionRefs.current[index].scrollIntoView({ behavior: "smooth" });
       setCurrentIndex(index);
     }
-  }
+  };
   return (
     <div
-      className="relative px-12 md:px-0 overflow-y-auto inset-0 h-full flex flex-col-reverse md:flex-row justify-center text-white md:pb-0 pb-[10vh]"
+      className="relative px-0 overflow-y-auto inset-0 h-full flex flex-col-reverse md:flex-row justify-center text-white"
       style={backgroundStyle}
     >
-      <div className="h-full md:block hidden w-1/12">
-      </div>
+      <div className="h-full md:block hidden w-1/12"></div>
       <div className="h-full hidden md:block md:w-5/12">
         <div className="h-full md:pt-24">
           <div className="md:w-1/2 w-full h-2/6 ">
@@ -91,30 +92,40 @@ export const Seriscard = ({ item }) => {
         data-twe-carousel-init
         data-twe-ride="carousel"
       >
-        <div className="absolute md:hidden block left-0 cursor-pointer  z-[999]" onClick={()=>setbox(!box)}>
-          open information
+        <div
+          className="absolute md:hidden block left-5 cursor-pointer  z-[999]"
+          onClick={() => setbox(!box)}
+        >
+          {!box && (
+            <FontAwesomeIcon className="hover:text-red-600" icon={faBars} />
+          )}
+          {box && <FontAwesomeIcon className="hover:text-red-600" icon={faX} />}
         </div>
-        <div className={`absolute p-2 md:hidden block transition-all duration-1000 inset-0 ${box ? 'w-full opacity-100' : 'w-0 opacity-0'} bg-black/50 backdrop-blur-[50px] z-50`}>
-        <div className="h-full pt-24">
-          <div className="md:w-1/2 w-full h-2/6 ">
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${logoUrl}`}
-              className="md:h-auto h-full w-full"
-              alt=""
-            />
-          </div>
-          <div className="flex gap-2 text-sm mt-3">
-            <div className="py-0.5 px-2">
-              {data.first_air_date ? data.first_air_date.slice(0, 4) : "2013"}
+        <div
+          className={`absolute p-2 md:hidden block transition-all duration-1000 inset-0 ${
+            box ? "w-full opacity-100" : "w-0 opacity-0"
+          } bg-black/50 backdrop-blur-[50px] z-50`}
+        >
+          <div className="h-full pt-24">
+            <div className="md:w-1/2 w-full h-2/6 ">
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${logoUrl}`}
+                className="md:h-auto h-full w-full"
+                alt=""
+              />
             </div>
-            <div className="py-0.5 px-2 border-white border rounded-md">
-              {data.adult ? "18+" : "16+"}
+            <div className="flex gap-2 text-sm mt-3">
+              <div className="py-0.5 px-2">
+                {data.first_air_date ? data.first_air_date.slice(0, 4) : "2013"}
+              </div>
+              <div className="py-0.5 px-2 border-white border rounded-md">
+                {data.adult ? "18+" : "16+"}
+              </div>
+              <div className="py-0.5 px-2">IMDB {data.vote_average}/10</div>
+              <div className="py-0.5 px-2">1hr 25min</div>
             </div>
-            <div className="py-0.5 px-2">IMDB {data.vote_average}/10</div>
-            <div className="py-0.5 px-2">1hr 25min</div>
+            <div className="h-2/6 overflow-auto mt-2">{data.overview}</div>
           </div>
-          <div className="h-2/6 overflow-auto mt-2">{data.overview}</div>
-        </div>
         </div>
         <div class="relative w-full h-full overflow-hidden after:clear-both after:block after:content-['']">
           {item.charactrimg.map((charImg, index) => (
@@ -127,7 +138,10 @@ export const Seriscard = ({ item }) => {
               // Adding data-twe-carousel-active conditionally
               {...(index === 0 ? { "data-twe-carousel-active": true } : {})}
             >
-              <Link to={`/movie-site/person/${charImg.id}/${item.id}`} className="block w-full h-full cursor-pointer">
+              <Link
+                to={`/movie-site-react/person/${charImg.id}/${item.id}`}
+                className="block w-full h-full cursor-pointer"
+              >
                 <div className="h-full w-full relative">
                   <img
                     src={require(`../../imgs/${charImg.img}`)}
