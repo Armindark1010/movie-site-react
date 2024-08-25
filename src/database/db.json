@@ -1,0 +1,34 @@
+{
+    "Films": [
+      { "id": "1396", "title": "Breaking Bad","charactrimg":[
+        {"img":"Breaking_Bad.png","name":"Walter White","id":17419}
+      ] ,"logo":"Breaking_Bad_logo.png"},
+      { "id": "60574", "title": "Peaky Blinders","charactrimg":[
+        {"img":"Tommy_Shelby.png","name":"Tommy Shelby","id":2037}
+      ] ,"logo":"Peaky_Blinders_Logo.png"},
+      { "id": "116135", "title": "Vikings: Valhalla","charactrimg":[
+        {"img":"Leif_Eriksson.png","name":"Leif Eriksson","id":2514293},
+        {"img":"Harald_Sigurdsson.png","name":"Harald Sigurdsson","id":1502483},
+        {"img":"Freydis_Eriksdotter.png","name":"Freydis Eriksdotter","id":1679829}
+      ] ,"logo":"Vikings_Valhalla_Logo.png"},
+      { "id": "117376", "title": "Vincenzo","charactrimg":[
+        {"img":"Vincenzo_Cassano.png","name":"Vincenzo Cassano","id":150698},
+        {"img":"Jang_Joon_woo.png","name":"Jang Joon-woo","id":1251647},
+        {"img":"Jang_Han_seo.png","name":"Jang Han-seo","id":1385609}
+      ] ,"logo":"Vincenzo_Logo.png"},
+      { "id": "1668", "title": "Friends","charactrimg":[
+        {"img":"Monica_Geller.png","name":"Monica Geller","id":14405},
+        {"img":"Ross_Geller.png","name":" Ross Geller","id":14409},
+        {"img":"Rachel_Green.png","name":"Rachel Green","id":4491},
+        {"img":"Joey_Tribbiani.png","name":"Joey Tribbiani","id":14407},
+        {"img":"Chandler_Bing.png","name":"Chandler Bing","id":14408},
+        {"img":"Phoebe_Buffay.png","name":"Phoebe Buffay","id":14406}
+      ] ,"logo":"friends-logo.png"},
+      { "id": "1399", "title": "Game of Thrones","charactrimg":[
+        {"img":"mother_of_dragons.png","name":"mother of dragons","id":1223786},
+        {"img":"Jon_Snow.png","name":"Jon Snow","id":239019},
+        {"img":"Sansa_Stark.png","name":"Sansa Stark","id":1001657},
+        {"img":"Tyrion_Lannister.png","name":"Tyrion Lannister","id":22970}
+      ] ,"logo":"friends-logo.png"}
+    ]
+  }
