@@ -82,7 +82,7 @@ export const Serialcard = () => {
             Show more
           </Link>
         </div>
-        <div class="flex w-full h-full justify-between md:gap-5 gap-2 pb-2 px-5">
+        <div className="flex w-full h-full justify-between md:gap-5 gap-2 pb-2 px-5">
           <button
             onClick={() => scrollLeft(slider)}
             className="absolute md:hidden left-0 top-0 bottom-0 z-10 flex justify-center items-center text-white p-2"
@@ -97,7 +97,7 @@ export const Serialcard = () => {
             ref={slider}
           >
             {films.map((item, index) => (
-              <div className="inline-block px-2 md:px-0 h-full w-1/3 relative cursor-pointer">
+              <div className="inline-block px-2 md:px-0 h-full w-1/3 relative cursor-pointer" key={index}>
                 <Serialindicator index={index} setid={setid} id={item.id} />
               </div>
             ))}

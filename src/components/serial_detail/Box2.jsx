@@ -24,12 +24,13 @@ export const Box2 = ({ credits, film_id }) => {
           <HeaderBox text="Top Cast" />
         </div>
         <div className="w-full h-[90%] overflow-x-auto px-2 flex-col-reverse md:flex-wrap justify-center md:flex hidden">
-          {credits.map((item) => (
+          {credits.map((item, index) => (
             <Link
               to={`/movie-site-react/person/${item.id}/${film_id}`}
-              class="avatar group/item gap-2 items-center cursor-pointer"
+              className="avatar group/item gap-2 items-center cursor-pointer"
+              key={index}
             >
-              <div class="ring-error ring-offset-base-100 w-16 rounded-full ring ring-offset-2 group-hover/item:ring-primary">
+              <div className="ring-error ring-offset-base-100 w-16 rounded-full ring ring-offset-2 group-hover/item:ring-primary">
                 <img
                   src={`https://image.tmdb.org/t/p/w500${item.profile_path}`}
                 />

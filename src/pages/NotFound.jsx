@@ -3,9 +3,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 export const NotFound = () => {
   return (
-    <div class="bg-black text-white">
-      <div class="flex h-screen">
-        <div class="m-auto text-center">
+    <div className="bg-black text-white">
+      <div className="flex h-screen">
+        <div className="m-auto text-center">
           <div>
             <svg
               width="631"
@@ -266,12 +266,12 @@ export const NotFound = () => {
               </defs>
             </svg>
           </div>
-          <p class="text-2xl md:text-base text-red-500 p-2 mb-4">
+          <p className="text-2xl md:text-base text-red-500 p-2 mb-4">
             The stuff you were looking for doesn't exist
           </p>
           <Link
             to="/movie-site-react/"
-            class="bg-transparent hover:bg-red-500 text-red-500 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-red-600 hover:border-transparent"
+            className="bg-transparent hover:bg-red-500 text-red-500 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-red-600 hover:border-transparent"
           >
             Home
           </Link>

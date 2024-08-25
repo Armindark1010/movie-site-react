@@ -88,7 +88,7 @@ export const Seriscard = ({ item }) => {
       </div>
       <div
         id={`charactrimg-${item.id}`}
-        class="relative !h-full w-full pt-16 md:w-5/12"
+        className="relative !h-full w-full pt-16 md:w-5/12"
         data-twe-carousel-init
         data-twe-ride="carousel"
       >
@@ -127,7 +127,7 @@ export const Seriscard = ({ item }) => {
             <div className="h-2/6 overflow-auto mt-2">{data.overview}</div>
           </div>
         </div>
-        <div class="relative w-full h-full overflow-hidden after:clear-both after:block after:content-['']">
+        <div className="relative w-full h-full overflow-hidden after:clear-both after:block after:content-['']">
           {item.charactrimg.map((charImg, index) => (
             <div
               id={`charactrimg-item-${index}-${item.id}`}
