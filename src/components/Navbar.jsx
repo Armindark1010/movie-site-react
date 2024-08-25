@@ -31,9 +31,14 @@ export const Navbar = () => {
       <div className='w-1/3 md:block hidden'></div>
       <div className="flex items-center justify-between md:w-1/3 w-10/12 relative">
         <div>
-          <Link to="/Films" className={`font-bold text-2xl ${getLinkClass('/Films')}`}>
-            Films
-          </Link>
+        <Link 
+  to="/" 
+  className={`font-bold text-2xl ${currentPath === '/' || currentPath.startsWith('/Films') ? 'text-black' : 'text-gray-400'}`}
+>
+  Films
+</Link>
+
+
         </div>
         <div>
           <Link to="/Serial" className={`font-bold text-2xl ${getLinkClass('/Serial')}`}>
