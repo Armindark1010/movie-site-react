@@ -10,7 +10,7 @@ import $ from 'jquery'
 export const Imgbox = ({url}) => {
     const modal_btn = (url) => {
         $("#modal_img").attr('src', url);
-        $("#download").attr('href', url); // اصلاح 'herf' به 'href'
+        $("#download").attr('href', url);
     };
     useEffect(() => {
         initTWE({ Modal, Ripple });

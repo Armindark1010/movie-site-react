@@ -9,7 +9,6 @@ export const Serialcard = () => {
   const carouselRef = useRef(null);
   const slider = useRef(null);
   const [films, setFilms] = useState(data.Films);
-  const [showmore, setshow] = useState(3);
   const [id, setid] = useState(data.Films[2].id);
   const scrollLeft = (scrollRef) => {
     scrollRef.current.scrollBy({
@@ -58,7 +57,7 @@ export const Serialcard = () => {
       id="carousel-seris"
       className="relative w-full h-screen overflow-hidden bg-black"
     >
-      <div className="relative h-[90vh] overflow-hidden z-10 rounded-lg">
+      <div className="relative h-[70vh] overflow-hidden z-10 rounded-lg">
         {films.map((item, index) => (
           <div
             id={`carousel-seris-${index}`}
@@ -73,7 +72,7 @@ export const Serialcard = () => {
           </div>
         ))}
       </div>
-      <div className="h-[20vh] z-20 bg-black/20 shadow-[0px_-20px_20px_20px_black]  backdrop-blur-[20px] absolute bottom-0 right-0 left-0">
+      <div className="h-[20vh] z-20 bg-black/20 shadow-[0px_-20px_20px_20px_black]  backdrop-blur-[20px] absolute md:bottom-0 bottom-[10vh] right-0 left-0">
         <div className="flex justify-center text-red-600 cursor-pointer hover:text-blue-600 absolute top-[-50px] left-0 right-0">
           <Link
             to={`/movie-site-react/Serial/${id}`}
@@ -93,11 +92,11 @@ export const Serialcard = () => {
           </button>
 
           <div
-            className={`h-full overflow-x-hidden whitespace-nowrap md:flex md:justify-center md:gap-5 overflow-y-hidden scroll-smooth `}
+            className={`h-full w-full md:mx-12 overflow-x-hidden whitespace-nowrap md:flex md:justify-center md:gap-5 overflow-y-hidden scroll-smooth `}
             ref={slider}
           >
             {films.map((item, index) => (
-              <div className="inline-block px-2 md:px-0 h-full w-1/3 relative cursor-pointer" key={index}>
+              <div className="inline-block px-2 md:px-0 h-full md:w-full w-1/3 relative cursor-pointer" key={index}>
                 <Serialindicator index={index} setid={setid} id={item.id} />
               </div>
             ))}

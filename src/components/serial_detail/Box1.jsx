@@ -1,11 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import axios from "axios";
-import name_label from "../../imgs/name_label.svg";
-import { Carousel, initTWE } from "tw-elements";
 import { Trailerbtn } from "../Trailerbtn";
 
 export const Box1 = ({ data, scroll, goindex,logoUrl }) => {
-  const [backgroundStyle, setbg] = useState(null);
   const [showSeasons, setShowSeasons] = useState(false);
 
   return (

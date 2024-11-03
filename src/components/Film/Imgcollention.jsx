@@ -5,7 +5,6 @@ import { Carousel } from 'flowbite';
 export const Imgcollention = ({ id }) => {
     const [filmbg, setFilmbgData] = useState([]);
     const [filmbgsm, setFilmbgDatasm] = useState([]);
-    const mslide = [{}, {}, {}, {}, {}]
     const carouselRef = useRef(null)
 
 
@@ -39,7 +38,6 @@ useEffect(() => {
         const options = {
             defaultPosition: 0,
             interval: 3000,
-        
             indicators: {
                 activeClasses: 'bg-white dark:bg-gray-800',
                 inactiveClasses:
@@ -66,7 +64,8 @@ useEffect(() => {
                         el: document.getElementById(`carousel-indicator-4-${id}`),
                     },
                 ],
-            },
+          },
+            
         };
   
       carouselRef.current = new Carousel(carouselElement, items, options);

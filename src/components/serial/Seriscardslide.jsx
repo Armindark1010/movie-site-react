@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 export const Seriscard = ({ item }) => {
   const [data, setData] = useState({});
   const [backgroundStyle, setbg] = useState({});
-  const carouselRef = useRef(null);
   const [logoUrl, setLogoUrl] = useState("");
   const sectionRefs = useRef([]);
   const [box, setbox] = useState(false);
@@ -135,7 +134,6 @@ export const Seriscard = ({ item }) => {
               className="relative float-left -mr-[100%] h-full w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
               data-twe-carousel-fade
               data-twe-carousel-item
-              // Adding data-twe-carousel-active conditionally
               {...(index === 0 ? { "data-twe-carousel-active": true } : {})}
             >
               <Link

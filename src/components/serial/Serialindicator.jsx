@@ -25,7 +25,7 @@ export const Serialindicator = ({ id, index, setid }) => {
     <button
       id={`carousel-indicator-serial-${index}`}
       type="button"
-      className="w-full h-full py-2 rounded-full relative"
+      className="w-full h-full my-2 rounded-full relative"
       aria-current={index == 0 ? true : false}
       aria-label={`Slide ${index}`}
       onClick={() => setid(id)}
