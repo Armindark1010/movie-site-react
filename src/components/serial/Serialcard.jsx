@@ -57,7 +57,7 @@ export const Serialcard = () => {
       id="carousel-seris"
       className="relative w-full h-screen overflow-hidden bg-black"
     >
-      <div className="relative h-[70vh] overflow-hidden z-10 rounded-lg">
+      <div className="relative h-[80vh] overflow-hidden z-10 rounded-lg">
         {films.map((item, index) => (
           <div
             id={`carousel-seris-${index}`}
@@ -72,7 +72,7 @@ export const Serialcard = () => {
           </div>
         ))}
       </div>
-      <div className="h-[20vh] z-20 bg-black/20 shadow-[0px_-20px_20px_20px_black]  backdrop-blur-[20px] absolute md:bottom-0 bottom-[10vh] right-0 left-0">
+      <div className="h-[20vh] z-20 bg-black/20 shadow-[0px_-20px_20px_20px_black]  backdrop-blur-[20px] absolute md:bottom-0 bottom-[5vh] right-0 left-0">
         <div className="flex justify-center text-red-600 cursor-pointer hover:text-blue-600 absolute top-[-50px] left-0 right-0">
           <Link
             to={`/movie-site-react/Serial/${id}`}
